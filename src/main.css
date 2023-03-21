@@ -1,0 +1,25 @@
+.t-sans-serif {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.t-serif {
+	font-family: 'Times New Roman', Georgia, serif;
+}
+
+.t-header {
+	font-size: 3rem;
+	font-family: inherit;
+	font-weight: 500;
+}
+
+.t-subheader {
+	font-size: 2rem;
+	font-family: inherit;
+	font-weight: 400;
+}
+
+.t-body {
+	font-size: 1rem;
+	font-family: inherit;
+	font-weight: 300;
+}

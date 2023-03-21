@@ -1,0 +1,26 @@
+{
+	"name": "tent",
+	"version": "1.0.0",
+	"description": "structural webcomponents",
+	"main": "index.js",
+	"scripts": {
+		"compile-css": "npx postcss ./src/main.css > ./dist/main.css",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mlandolfi/tent.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/mlandolfi/tent/issues"
+	},
+	"homepage": "https://github.com/mlandolfi/tent#readme",
+	"devDependencies": {
+		"cssnano": "^5.1.15",
+		"postcss": "^8.4.21",
+		"postcss-cli": "^10.1.0"
+	}
+}
