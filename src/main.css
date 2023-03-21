@@ -37,6 +37,7 @@
 	height: 48px;
 	border-radius: 50%;
 	position: relative;
+	display: inline-block;
 	animation: tSimpleLoaderRotate 1s linear infinite;
 }
 .t-simple-loader::before {
@@ -45,7 +46,7 @@
 	position: absolute;
 	inset: 0px;
 	border-radius: 50%;
-	border: 5px solid #fff;
+	border: 5px solid var(--t-primary);
 	animation: tSimpleLoaderPrixClipFix 2s linear infinite;
 }
 
