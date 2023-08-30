@@ -1,26 +1,36 @@
 {
-	"name": "tent",
-	"version": "1.0.0",
-	"description": "structural webcomponents",
-	"main": "index.js",
-	"scripts": {
-		"compile-css": "npx postcss ./src/main.css > ./dist/main.min.css",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/mlandolfi/tent.git"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/mlandolfi/tent/issues"
-	},
-	"homepage": "https://github.com/mlandolfi/tent#readme",
-	"devDependencies": {
-		"cssnano": "^5.1.15",
-		"postcss": "^8.4.21",
-		"postcss-cli": "^10.1.0"
-	}
+  "name": "tent",
+  "version": "1.0.0",
+  "description": "structural webcomponents",
+  "source": "src/index.ts",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
+  "scripts": {
+    "build": "rm -rf dist/*; parcel build --no-source-maps",
+    "watch": "parcel watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlandolfi/tent.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mlandolfi/tent/issues"
+  },
+  "homepage": "https://github.com/mlandolfi/tent#readme",
+  "devDependencies": {
+    "@parcel/packager-ts": "^2.9.3",
+    "@parcel/transformer-typescript-types": "^2.9.3",
+    "cssnano": "^5.1.15",
+    "parcel": "^2.9.3",
+    "terser": "^5.19.2",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "lit": "^2.8.0"
+  }
 }

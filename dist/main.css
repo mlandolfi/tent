@@ -1,56 +1,52 @@
-/* Theming */
 :root {
   --t-primary: #18a558;
-  --t-secondary: #eeeeee;
+  --t-secondary: #eee;
 }
 
-/* Core Styles */
 .t-sans-serif {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .t-serif {
-  font-family: "Times New Roman", Georgia, serif;
+  font-family: Times New Roman, Georgia, serif;
 }
 
 .t-header {
-  font-size: 3rem;
   font-family: inherit;
+  font-size: 3rem;
   font-weight: 500;
 }
 
 .t-subheader {
-  font-size: 2rem;
   font-family: inherit;
+  font-size: 2rem;
   font-weight: 400;
 }
 
 .t-body {
-  font-size: 1rem;
   font-family: inherit;
+  font-size: 1rem;
   font-weight: 300;
 }
 
-/* Loading Indicators */
 .t-simple-loader {
+  border-radius: 50%;
   width: 48px;
   height: 48px;
-  border-radius: 50%;
-  position: relative;
+  animation: 1s linear infinite tSimpleLoaderRotate;
   display: inline-block;
-  animation: tSimpleLoaderRotate 1s linear infinite;
-}
-.t-simple-loader::before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  inset: 0px;
-  border-radius: 50%;
-  border: 5px solid var(--t-primary);
-  animation: tSimpleLoaderPrixClipFix 2s linear infinite;
+  position: relative;
 }
 
-/* Toolbar */
+.t-simple-loader:before {
+  content: "";
+  box-sizing: border-box;
+  border: 5px solid var(--t-primary);
+  border-radius: 50%;
+  animation: 2s linear infinite tSimpleLoaderPrixClipFix;
+  position: absolute;
+  inset: 0;
+}
 
 @keyframes tSimpleLoaderRotate {
   100% {
@@ -62,15 +58,19 @@
   0% {
     clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
   }
+
   25% {
     clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
   }
+
   50% {
     clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
   }
+
   75% {
     clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
   }
+
   100% {
     clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
   }
@@ -82,28 +82,31 @@
   display: inline-block;
   position: relative;
 }
-.t-square-loader::after,
-.t-square-loader::before {
+
+.t-square-loader:after, .t-square-loader:before {
   content: "";
+  border: 2px solid var(--t-secondary);
+  box-sizing: border-box;
   width: 48px;
   height: 48px;
-  border: 2px solid var(--t-secondary);
+  animation: 2s ease-in-out infinite tSquareLoaderRotation;
   position: absolute;
-  left: 0;
   top: 0;
-  box-sizing: border-box;
-  animation: tSquareLoaderRotation 2s ease-in-out infinite;
+  left: 0;
 }
-.t-square-loader::after {
+
+.t-square-loader:after {
   border-color: var(--t-primary);
   animation-delay: 1s;
 }
 
 @keyframes tSquareLoaderRotation {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
